@@ -7,8 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	메인화면~
+	메인화면2~
 	<p/>${head_id}
-	<a href="${pageContext.request.contextPath}/login/NewFile2">ddd</a>
 </body>
 </html>

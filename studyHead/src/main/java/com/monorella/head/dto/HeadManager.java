@@ -1,6 +1,6 @@
 package com.monorella.head.dto;
 
-public class Login {
+public class HeadManager {
 	private int head_manager;
 	private String head_id;
 	private String head_pw;
