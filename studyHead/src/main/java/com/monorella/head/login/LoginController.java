@@ -18,24 +18,31 @@ public class LoginController {
 	@Autowired
 	LoginDao loginDao;
 	
-	// ·Î±×¾Æ¿ô Ã³¸®
+	// TEST í¼
+	@RequestMapping(value = "/test", method = RequestMethod.GET)
+	public String testForm() {
+		System.out.println("LoginController-> testForm()");
+		return "/test";
+	}
+	
+	// ë¡œê·¸ì•„ì›ƒ
 	@RequestMapping(value = "/login/logout", method = RequestMethod.GET)
 	public String logout() {
 		System.out.println("LoginController-> logout()");
 		return "/login/login_form";
 	}
 	
-	// ·Î±×ÀÎ Ã³¸®
+	// ë¡œê·¸ì¸ ì²˜ë¦¬
 	@RequestMapping(value = "/login/login_pro", method = RequestMethod.POST)
 	public String loginPro(HeadManager hm, HttpSession session) {
 		System.out.println("LoginController-> loginPro() start");
 		HeadManager headManager = loginDao.loginPro(hm);
 		System.out.println(headManager);
 		if(headManager == null){
-			System.out.println("ÇØ´ç ¾ÆÀÌµð°¡ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.");
+			System.out.println("ë¡œê·¸ì¸ ì‹¤íŒ¨");
 			return null;
 		} else {
-			System.out.println("¾ÆÀÌµð Á¸Àç, ¾ÆÀÌµð ºñ¹Ð¹øÈ£ È®ÀÎ");
+			System.out.println("ë¡œê·¸ì¸ ì„±ê³µ");
 			session.setAttribute("head_id", hm.getHead_id());
 			session.setAttribute("head_pw", hm.getHead_pw());
 			session.setAttribute("head_name", hm.getHead_name());
@@ -43,7 +50,7 @@ public class LoginController {
 			return "/dashboard/home";
 		}
 	}
-	//·Î±×ÀÎ Æû ¿äÃ»
+	// ë¡œê·¸ì¸ í¼
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String loginForm() {
 		System.out.println("LoginController-> loginForm()");
