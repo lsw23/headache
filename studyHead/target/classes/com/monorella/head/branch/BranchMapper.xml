@@ -1,10 +1,18 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.monorella.head.branch.BranchMapper">
-	<insert id="inputBranch" parameterType="com.monorella.head.dto.Branch">
+
+	
+
+	<select id="selectBranchCount" resultType="int">
+		SELECT COUNT(*) FROM branch	
+	</select>
+	
+	<insert id="insertBranch" parameterType="com.monorella.head.dto.Branch">
 		INSERT INTO branch (
 		branch_cd
 		, branch_owner_cd
+		, branch_name
 		, branch_tel
 		, branch_addr
 		, branch_in_date
@@ -13,6 +21,7 @@
 		VALUES (
 		#{branch_cd}
 		, #{branch_owner_cd}
+		, #{branch_name}
 		, #{branch_tel}
 		, #{branch_addr}
 		, #{branch_in_date}

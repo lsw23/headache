@@ -3,6 +3,7 @@ package com.monorella.head.dto;
 public class Branch {
 	private int branch_cd;
 	private int branch_owner_cd;
+	private String branch_name;
 	private String branch_tel;
 	private String branch_addr;
 	private String branch_in_date;
@@ -20,6 +21,12 @@ public class Branch {
 	}
 	public void setBranch_owner_cd(int branch_owner_cd) {
 		this.branch_owner_cd = branch_owner_cd;
+	}
+	public String getBranch_name() {
+		return branch_name;
+	}
+	public void setBranch_name(String branch_name) {
+		this.branch_name = branch_name;
 	}
 	public String getBranch_tel() {
 		return branch_tel;
@@ -51,12 +58,11 @@ public class Branch {
 	public void setMember_num(int member_num) {
 		this.member_num = member_num;
 	}
+	
 	@Override
 	public String toString() {
-		return "Branch [branch_cd=" + branch_cd + ", branch_owner_cd=" + branch_owner_cd + ", branch_tel=" + branch_tel
-				+ ", branch_addr=" + branch_addr + ", branch_in_date=" + branch_in_date + ", room_num=" + room_num
-				+ ", member_num=" + member_num + "]";
+		return "Branch [branch_cd=" + branch_cd + ", branch_owner_cd=" + branch_owner_cd + ", branch_name="
+				+ branch_name + ", branch_tel=" + branch_tel + ", branch_addr=" + branch_addr + ", branch_in_date="
+				+ branch_in_date + ", room_num=" + room_num + ", member_num=" + member_num + "]";
 	}
-	
-	
 }

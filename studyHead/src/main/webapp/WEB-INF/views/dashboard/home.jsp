@@ -1,33 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-<meta charset="utf-8">
-<title>Bootstrap 4 Dashboard</title>
-<meta name="description" content="A Bootstrap 4 admin dashboard theme that will get you started. The sidebar toggles off-canvas on smaller screens. This example also include large stat blocks, modal and cards. The top navbar is controlled by a separate hamburger toggle button." />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Codeply">
-
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" />
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
-<link rel="stylesheet" href="css/styles.css" />
 
 </head>
 
 <body>
 <!-- top -->
 	<c:import url = "../module/top.jsp" />
-	
 <!-- left -->
 	<div class="container-fluid" id="main">
 		<div class="row row-offcanvas row-offcanvas-left">
 			<c:import url = "../module/left.jsp" />
 <!--/모듈 여기까지-->
 
-			<div class="col-md-9 col-lg-10 main">
+			<div class="col-md-12 col-lg-10 main">
 
 				<!--toggle sidebar button
             <p class="hidden-md-up">
@@ -64,7 +49,7 @@
 						<div class="card card-inverse card-danger">
 							<div class="card-block bg-danger">
 								<div class="rotate">
-									<i class="fa fa-list fa-4x"></i>
+									<i class="fa fa-list fa-5x"></i>
 								</div>
 								<h6 class="text-uppercase">Posts</h6>
 								<h1 class="display-1">87</h1>

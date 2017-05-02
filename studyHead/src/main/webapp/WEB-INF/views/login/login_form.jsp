@@ -33,8 +33,8 @@
 			<form id="loginForm" class="form"
 				action="${pageContext.request.contextPath}/login/login_pro"
 				method="POST">
-				<input id="head_id" name="head_id" type="text" placeholder="Username"> 
-				<input id="head_pw" name="head_pw" type="password" placeholder="Password">
+				<input id="head_id" name="head_id" type="text" value="id01"/> 
+				<input id="head_pw" name="head_pw" type="password" value="pw01"/>
 				<input id="login-button" type="button" value="Login"/>
 			</form>
 		</div>

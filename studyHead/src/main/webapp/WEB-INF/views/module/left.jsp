@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<div class="col-md-3 col-lg-2 sidebar-offcanvas" id="sidebar"
-		role="navigation">
+	<div class="col-sm-2 sidebar-offcanvas" id="sidebar" role="navigation">
 		<ul class="nav flex-column pl-1">
 			<li class="nav-item"><a class="nav-link" href="#submenu1"
 				data-toggle="collapse" data-target="#submenu1">DashBoard ▾</a>
@@ -12,10 +11,10 @@
 				</ul>
 			</li>
 			<li class="nav-item"><a class="nav-link" href="#submenu2"
-				data-toggle="collapse" data-target="#submenu2">열람실 ▾</a>
+				data-toggle="collapse" data-target="#submenu2">지점관리 ▾</a>
 				<ul class="list-unstyled flex-column pl-3 collapse" id="submenu2"
 					aria-expanded="false">
-					<li class="nav-item"><a class="nav-link" href="">열람실등록</a></li>
+					<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/branch">지점등록</a></li>
 					<li class="nav-item"><a class="nav-link" href="">열람실현황</a></li>
 				</ul>
 			</li>
@@ -36,4 +35,4 @@
 				</ul>
 			</li>
 		</ul>
-</div>
+	</div>

@@ -17,14 +17,15 @@ public class LoginController {
 	
 	@Autowired
 	LoginDao loginDao;
-	//메인 2 요청(세션영역확인)
-		@RequestMapping(value = "/login/NewFile2", method = RequestMethod.GET)
-		public String login2() {
-			System.out.println("LoginController-> login2()");
-			return "/login/NewFile2";
-		}
 	
-	//로그인 처리
+	// 로그아웃 처리
+	@RequestMapping(value = "/login/logout", method = RequestMethod.GET)
+	public String logout() {
+		System.out.println("LoginController-> logout()");
+		return "/login/login_form";
+	}
+	
+	// 로그인 처리
 	@RequestMapping(value = "/login/login_pro", method = RequestMethod.POST)
 	public String loginPro(HeadManager hm, HttpSession session) {
 		System.out.println("LoginController-> loginPro() start");
@@ -39,7 +40,7 @@ public class LoginController {
 			session.setAttribute("head_pw", hm.getHead_pw());
 			session.setAttribute("head_name", hm.getHead_name());
 			session.setAttribute("head_manager", hm.getHead_manager());
-			return "/login/NewFile";
+			return "/dashboard/home";
 		}
 	}
 	//로그인 폼 요청
