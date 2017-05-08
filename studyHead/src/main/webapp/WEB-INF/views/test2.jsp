@@ -14,7 +14,7 @@
 	<!-- Bootstrap style -->
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/test/css/flexslider.css">                                                   
 	<!-- Flexslider style -->       
-	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/test/css/templatemo-style.css">                                           
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/test/css/templatemo-style.css">                                             
 	<!-- Templatemo style -->
 	
 </head>
@@ -29,12 +29,12 @@
 	
 	<div class="container-fluid">
 	    <div class="row">
-	        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-5 col-xl-4">
+	        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
 	            <div class="header">
 	                <!-- site title -->
 					<header class="box box-white">
 					    <a href="javascript:void(0)" class="js-site-title">
-					        <h1 class="box-text site-title-text">The Study Room</h1>
+					        <h2 class="box-text site-title-text">The Study Room</h2>
 					    </a>            
 					</header>
 					<!-- site navigation -->
@@ -52,17 +52,7 @@
 				            </li>
 				            <li data-nav-item-id="page-3" class="block-keep-ratio block-keep-ratio-1-1 block-width-half box box-white box-nav-item js-nav-item pull-xs-left">
 				                <a href="#page-3" class="block-keep-ratio-content box-nav-item-link">
-				                    <span class="box-text box-text-nav-item flexbox-center">Branch Register</span>
-				                </a>
-				            </li>
-				            <li data-nav-item-id="page-4" class="block-keep-ratio block-keep-ratio-1-1 block-width-half box box-white box-nav-item js-nav-item pull-xs-right">
-				                <a href="#page-4" class="block-keep-ratio-content box-nav-item-link">
-				                    <span class="box-text box-text-nav-item flexbox-center">Branch List</span>
-				                </a>
-				            </li>
-				             <li data-nav-item-id="page-3" class="block-keep-ratio block-keep-ratio-1-1 block-width-half box box-white box-nav-item js-nav-item pull-xs-left">
-				                <a href="#page-3" class="block-keep-ratio-content box-nav-item-link">
-				                    <span class="box-text box-text-nav-item flexbox-center">Branch Register</span>
+				                    <span class="box-text box-text-nav-item flexbox-center">Services</span>
 				                </a>
 				            </li>
 				            <li data-nav-item-id="page-4" class="block-keep-ratio block-keep-ratio-1-1 block-width-half box box-white box-nav-item js-nav-item pull-xs-right">
@@ -78,14 +68,13 @@
 	
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-7 col-xl-7">
 			    <div class="content-wrapper js-content-wrapper">
-			       
 			        <!-- Login -->
 					<section data-page-id="page-1" class="content js-content">
 					    <header class="box box-black margin-b-20">
 					        <h2 class="box-text page-title-text">Login</h2>
 					    </header>
 					    <div class="content-text">
-					        <p>You are never too old to set another goal or to dream a new dream. - C.S. Lewis
+					        <p>In felis turpis, tincidunt a odio interdum, ornare interdum magna. Proin leo tortor, adipiscing et volutpat tincidunt, imperdiet sit amet purus.
 					        </p>
 					        <form action="${pageContext.request.contextPath}/login/login_pro" method="post" class="contact-form">
 					            <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-6 form-group-2-col-left">
@@ -134,90 +123,34 @@
 					</section> 
 					<!-- #gallery -->
 			
-					<!-- Branch Register -->
+					<!-- services -->
 					<section data-page-id="page-3" class="content js-content">		    
 					    <header class="box box-black margin-b-20">
-					        <h3 class="box-text page-title-text">Branch Register</h3>
+					        <h2 class="box-text page-title-text">Services</h2>
 					    </header>
 					    <div class="content-text">
-							<form action="${pageContext.request.contextPath}/branch/branch_insert_pro" method="post" class="contact-form">
-					            <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12 form-group-2-col-left">
-					                <input type="text" id="branch_name" name="head_id" class="form-control" placeholder="지점명" required/><br>
-					                <input type="text" id="branch_tel" name="head_id" class="form-control" placeholder="지점 연락처" required/><br>
-					                <input type="text" id="branch_addr" name="head_id" class="form-control" placeholder="지점 주소" required/><br>
-					                <input type="text" id="room_num" name="head_id" class="form-control" placeholder="열람실수" required/><br>
-					                <input type="text" id="member_num" name="head_id" class="form-control" placeholder="회원수" required/><br>
-					                <p>등록일</p>
-					                <input type="date" id="branch_in_date" name="head_id" class="form-control" required/><br>
-					            </div>
-					            <button type="submit" class="btn btn-primary submit-btn">Submit</button>
-					        </form>
-					    </div>       
+					        <p>Download the story theme from templatemo. Quisque placerat turpis non tortor fringilla, in ornare magna eleifend. Etiam mattis varius fringilla.
+					        </p>
+					        <h4>Sub Title One</h4>
+					        <p>Nullam tortor mauris, bibendum ac ex vel, auctor congue est. Aenean quis tellus molestie, laoreet massa a, maximus est. Interdum et malesuada fames ac ante ipsum primis. 
+					        </p>
+					        <h4>Sub Title Two</h4>
+					        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut sapien quis ante faucibus tempus. Nam ut dui vitae tellus vehicula porttitor in nec lorem.
+					        </p>
+					    </div>            
 					</section> 
-					<!-- #Branch Register -->
+					<!-- #services -->
 					<!-- about -->
-					<section data-page-id="page-4" class="content js-content content-gallery">
+					<section data-page-id="page-4" class="content js-content">
 				    	<header class="box box-black margin-b-20">
-				        	<h3 class="box-text page-title-text">Branch List</h3>
+				        	<h2 class="box-text page-title-text">About the story</h2>
 				    	</header>
+				    
 					    <div class="content-text">
-					        <div class="container">
-								<div>등록지점 수 : ${totalRowCount}</div>
-								<div class="col-sm-12"></div>
-								<table class="table table-striped">
-									<thead>
-									<tr>				
-										<th>지점명</th>
-										<th>연락처</th>
-										<th>주소</th>
-										<th>등록일</th>
-										<th>열람실 수</th>
-										<th>회원 수</th>
-									</tr>
-									</thead>
-									<tbody>
-										<c:forEach var="b" items="${list}">
-										<tr>						
-											<td>sadsadsa</td>
-											<td>sadsadsa</td>
-											<td>sadsadsa</td>
-											<td>sadsadsa</td>
-											<td>sadsadsa</td>
-											<td>sadsadsa</td>
-										</tr>
-										<tr>						
-											<td>sadsadsa</td>
-											<td>sadsadsa</td>
-											<td>sadsadsa</td>
-											<td>sadsadsa</td>
-											<td>sadsadsa</td>
-											<td>sadsadsa</td>
-											
-										</tr>
-										<tr>						
-											<td>sadsadsa</td>
-											<td>sadsadsa</td>
-											<td>sadsadsa</td>
-											<td>sadsadsa</td>
-											<td>sadsadsa</td>
-											<td>sadsadsa</td>
-											
-										</tr>
-										</c:forEach>
-									</tbody>
-								</table>
-								<ul class="pager">
-									<c:if test="${currentPage > 1}">
-										<li class="previous"><a href="${pageContext.request.contextPath}/member/member_list?currentPage=${currentPage-1}">이전</a></li>
-									</c:if>
-									<c:if test="${currentPage < lastPage}">
-										<li class="next"><a href="${pageContext.request.contextPath}/member/member_list?currentPage=${currentPage+1}">다음</a></li>
-									</c:if>
-								</ul>
-								<div>
-									<a class="btn btn-default" href="${pageContext.request.contextPath}/member/member_form">게시글 입력</a>
-								</div>
-							</div>
+					        <p>Story is free Bootstrap (v4.0 alpha 2) theme by <a rel="nofollow" href="http://www.templatemo.com" target="_parent">templatemo</a>. You can download, modify and use this layout for any website. Please tell your friends about us. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					        </p>
+					        <p>Vivamus imperdiet tellus lobortis tellus fermentum, at varius purus tincidunt. Aenean quis tellus molestie, laoreet massa a, maximus est. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+					        </p>
 					    </div>            
 					</section> 
 					<!-- #about -->

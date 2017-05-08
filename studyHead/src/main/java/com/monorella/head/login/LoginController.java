@@ -17,14 +17,7 @@ public class LoginController {
 	
 	@Autowired
 	LoginDao loginDao;
-	
-	// TEST 폼
-	@RequestMapping(value = "/test", method = RequestMethod.GET)
-	public String testForm() {
-		System.out.println("LoginController-> testForm()");
-		return "/test";
-	}
-	
+
 	// 로그아웃
 	@RequestMapping(value = "/login/logout", method = RequestMethod.GET)
 	public String logout() {
@@ -54,7 +47,7 @@ public class LoginController {
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String loginForm() {
 		System.out.println("LoginController-> loginForm()");
-		return "/login/login_form";
+		return "/test";
 	}
 	
 }
