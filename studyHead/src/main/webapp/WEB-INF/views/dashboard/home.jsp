@@ -1,24 +1,23 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- head -->
+	<c:import url="../module/head.jsp" />
 </head>
-
 <body>
-<!-- top -->
+	<!-- top -->
 	<c:import url = "../module/top.jsp" />
-<!-- left -->
+	
+	<!-- left -->
 	<div class="container-fluid" id="main">
 		<div class="row row-offcanvas row-offcanvas-left">
 			<c:import url = "../module/left.jsp" />
-<!--/모듈 여기까지-->
-
+			<!-- main -->
 			<div class="col-md-12 col-lg-10 main">
-
-				<!--toggle sidebar button
-            <p class="hidden-md-up">
-                <button type="button" class="btn btn-primary-outline btn-sm" data-toggle="offcanvas"><i class="fa fa-chevron-left"></i> Menu</button>
-            </p>-->
-
+				<br><br>
 				<h1 class="display-2 hidden-xs-down">Bootstrap 4 Dashboard</h1>
 				<p class="lead hidden-xs-down">(with off-canvas sidebar, based
 					on BS v4 alpha 6)</p>

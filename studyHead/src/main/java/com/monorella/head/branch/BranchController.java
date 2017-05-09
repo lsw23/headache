@@ -38,6 +38,7 @@ public class BranchController {
 	    int endPage = startPage + countPage-1;
 	    int nextPage = ((currentPage - 1)/5)*5+5+1;
 	    int previousPage = ((currentPage - 1)/5)*5-5+1;
+	    
 	    if(previousPage <= 0){
 	    	previousPage = 1;
 	    }
@@ -66,8 +67,8 @@ public class BranchController {
 		return "/branch/branch_list";
 	}
 	
-	// 지점 폼 요청
-	@RequestMapping(value="/branch", method=RequestMethod.GET)
+	// 지점 등록 폼 요청
+	@RequestMapping(value="//branch/branch_form", method=RequestMethod.GET)
 	public String branchForm(){
 		System.out.println("BranchController-> branchForm()");
 		return "branch/branch_form";

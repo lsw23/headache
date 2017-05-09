@@ -1,18 +1,29 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<!-- top -->
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- head -->
+	<c:import url="../module/head.jsp" />
+</head>
+<body>
+	<!-- top -->
 	<c:import url = "../module/top.jsp" />
-<!-- left -->
+	
+	<!-- left -->
 	<div class="container-fluid" id="main">
 		<div class="row row-offcanvas row-offcanvas-left">
 			<c:import url = "../module/left.jsp" />
-<!--/모듈 여기까지-->
+			<!-- main -->
 			<div class="col-sm-10 main row">
 <!-- ---------------------------------------------------------- -->	
 				<div class="col-sm-10">
+					<br><br><br>
+					<h1 style="color:#8EC7D0;"><b>지점 목록</b></h1>
+					<hr>
 					<div>
 						<b>전체 글 수 :</b> ${totalRowCount}
-						<a href="${pageContext.request.contextPath}/branch"><input type="button" class="btn btn-default" value="등록" style="float: right;"/></a>
 					</div><br>
 					<table id="user-table" class="table table-hover">
 						<thead>
@@ -38,36 +49,43 @@
 							</c:forEach>
 						</tbody>
 					</table><hr>
-					<c:if test="${currentPage > 0}">
-						<ul class="pager">   	
-							<li><a href="${pageContext.request.contextPath}/boardList?currentPage=${previousPage}"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
-							<li><a href="${pageContext.request.contextPath}/boardList?currentPage=${currentPage-1}">이전</a></li>
-					</c:if>
-					<c:forEach var="i" begin="${startPage}" end="${endPage}" step="1">
-						<c:if test="${i == currentPage}">	
-							<li class="disabled"><a href="#">${i}</a></li>
-						</c:if> 
-						<c:if test="${i != currentPage}">
-							<li><a href="${pageContext.request.contextPath}/boardList?currentPage=${i}">${i}</a></li>
-						</c:if>
-					</c:forEach>
-					<c:if test="${currentPage < lastPage}">
-						<li><a href="${pageContext.request.contextPath}/boardList?currentPage=${currentPage+1}">다음</a></li>
-						<li><a href="${pageContext.request.contextPath}/boardList?currentPage=${nextPage}"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
-					</ul>
-					</c:if>
+					
+					<a href="${pageContext.request.contextPath}/branch"><input type="button" class="btn btn-default" value="등록" style="float: left;"/></a>
+					
+					<nav aria-label="Page navigation example">
+					    <ul class="pagination justify-content-center">
+					        <c:if test="${currentPage > 1}">
+					            <li class="page-item">
+					            	<a class="page-link" href="${pageContext.request.contextPath}/branch/branch_list?currentPage=${currentPage-1}" aria-label="Previous">
+					            		<span aria-hidden="true">&laquo;</span>
+					            		<span class="sr-only">Previous</span>
+					            	</a>
+					            </li>	
+					        </c:if>
+					        <c:forEach var="i" begin="${startPage}" end="${endPage}" step="1">
+								<c:if test="${i == currentPage}">
+									<li class="page-item"><a class="page-link" href="#">${i}</a></li>
+								</c:if>
+								<c:if test="${i != currentPage}">
+									<li class="page-item"><a class="page-link" href="${pageContext.request.contextPath}/branch/branch_list?currentPage=${i}">${i}</a></li>
+								</c:if>
+							</c:forEach>
+							
+					        <c:if test="${currentPage < lastPage}">
+					            <li class="page-item">
+					            	<a class="page-link" href="${pageContext.request.contextPath}/branch/branch_list?currentPage=${currentPage+1}" aria-label="Next">
+					            		<span aria-hidden="true">&raquo;</span>
+					        			<span class="sr-only">Next</span>
+					            	</a>	
+					            </li>	
+					        </c:if>
+					    </ul>
+   					</nav> 
 				</div>
 				<div class="col-sm-2"></div>
 			</div>     
 <!-- ---------------------------------------------------------- -->			
 		</div>
-	<script
-		src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-	<script
-		src="//cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js"></script>
-	<script
-		src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
-
-	<script src="resources/js/scripts.js"></script>
+<c:import url = "../module/foot.jsp" />
 </body>
 </html>

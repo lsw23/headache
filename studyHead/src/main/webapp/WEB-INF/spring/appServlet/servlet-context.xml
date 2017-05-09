@@ -31,9 +31,9 @@
 	<!-- 커넥션 풀 설정 -->
 	<beans:bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
         <beans:property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-        <beans:property name="url" value="jdbc:mysql://monorella.cafe24.com:3306/monorella?useUnicode=true&amp;characterEncoding=utf-8"/>
-        <beans:property name="username" value="monorella"/>
-        <beans:property name="password" value="gkahsl!23"/>
+        <beans:property name="url" value="jdbc:mysql://dprtm77.cafe24.com:3306/dprtm77?useUnicode=true&amp;characterEncoding=utf-8"/>
+        <beans:property name="username" value="dprtm77"/>
+        <beans:property name="password" value="dnjstnddl!2"/>
     </beans:bean>
     
     <!-- mybatis설정 1.SqlSessionFactory -->
