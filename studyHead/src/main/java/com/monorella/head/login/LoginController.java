@@ -43,11 +43,11 @@ public class LoginController {
 			return "/dashboard/home";
 		}
 	}
-	// 로그인 폼
+	// test 로그인 폼
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String loginForm() {
 		System.out.println("LoginController-> loginForm()");
-		return "/test";
+		return "/login/login_form";
 	}
 	
 }

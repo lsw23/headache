@@ -61,4 +61,13 @@
 <!-- ---------------------------------------------------------- -->			
 			</div>
 			
-	<c:import url = "../module/top.jsp" />
+	<script
+		src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script
+		src="//cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js"></script>
+	<script
+		src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+
+	<script src="js/scripts.js"></script>
+</body>
+</html>

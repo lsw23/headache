@@ -7,50 +7,60 @@
 		<div class="row row-offcanvas row-offcanvas-left">
 			<c:import url = "../module/left.jsp" />
 <!--/모듈 여기까지-->
-			<div class="col-sm-10 main">
+			<div class="col-sm-10 main row">
 <!-- ---------------------------------------------------------- -->	
-				<div class="container">
-					<h1>독서실 회원 리스트</h1>
-					<div>전체행의 수 : ${totalRowCount}</div>
-					<table class="table table-striped">
+				<div class="col-sm-10">
+					<div>
+						<b>전체 글 수 :</b> ${totalRowCount}
+						<a href="${pageContext.request.contextPath}/branch"><input type="button" class="btn btn-default" value="등록" style="float: right;"/></a>
+					</div><br>
+					<table id="user-table" class="table table-hover">
 						<thead>
-						<tr>				
-							<th>지점명</th>
-							<th>연락처</th>
-							<th>주소</th>
-							<th>등록일</th>
-							<th>열람실 수</th>
-							<th>회원 수</th>
-						</tr>
+							<tr>
+								<th>지점</th>
+								<th>연락처</th>
+								<th>주소</th>
+								<th>열람실수</th>
+								<th>회원수</th>
+								<th>등록일</th>
+							</tr>
 						</thead>
 						<tbody>
 							<c:forEach var="b" items="${list}">
-							<tr>						
-							<td><a href="${pageContext.request.contextPath}/branch/branch_view?branch_cd=${b.branch_cd}">${b.branch_cd}</a></td>
-								<td>${b.branch_name}</td>
-								<td>${b.branch_tel}</td>
-								<td>${b.branch_addr}</td>
-								<td>${b.branch_in_date}</td>
-								<td>${b.room_num}</td>
-								<td>${b.member_num}</td>
-							</tr>
+								<tr>
+									<td>${b.branch_name}</td>
+									<td>${b.branch_tel}</td>
+									<td>${b.branch_addr}</td>
+									<td>${b.room_num}</td>
+									<td>${b.member_num}</td>
+									<td>${b.branch_in_date}</td>
+								</tr>
 							</c:forEach>
 						</tbody>
-					</table>
-					<ul class="pager">
-						<c:if test="${currentPage > 1}">
-							<li class="previous"><a href="${pageContext.request.contextPath}/member/member_list?currentPage=${currentPage-1}">이전</a></li>
+					</table><hr>
+					<c:if test="${currentPage > 0}">
+						<ul class="pager">   	
+							<li><a href="${pageContext.request.contextPath}/boardList?currentPage=${previousPage}"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
+							<li><a href="${pageContext.request.contextPath}/boardList?currentPage=${currentPage-1}">이전</a></li>
+					</c:if>
+					<c:forEach var="i" begin="${startPage}" end="${endPage}" step="1">
+						<c:if test="${i == currentPage}">	
+							<li class="disabled"><a href="#">${i}</a></li>
+						</c:if> 
+						<c:if test="${i != currentPage}">
+							<li><a href="${pageContext.request.contextPath}/boardList?currentPage=${i}">${i}</a></li>
 						</c:if>
-						<c:if test="${currentPage < lastPage}">
-							<li class="next"><a href="${pageContext.request.contextPath}/member/member_list?currentPage=${currentPage+1}">다음</a></li>
-						</c:if>
+					</c:forEach>
+					<c:if test="${currentPage < lastPage}">
+						<li><a href="${pageContext.request.contextPath}/boardList?currentPage=${currentPage+1}">다음</a></li>
+						<li><a href="${pageContext.request.contextPath}/boardList?currentPage=${nextPage}"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
 					</ul>
-					<div>
-						<a class="btn btn-default" href="${pageContext.request.contextPath}/member/member_form">게시글 입력</a>
-					</div>
+					</c:if>
 				</div>
+				<div class="col-sm-2"></div>
+			</div>     
 <!-- ---------------------------------------------------------- -->			
-			</div>
+		</div>
 	<script
 		src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<script

@@ -27,7 +27,7 @@
 		</div>
 		<div class="navbar-collapse collapse" id="collapsingNavbar">
 			<ul class="navbar-nav">
-				<li class="nav-item active"><a class="nav-link" href="${pageContext.request.contextPath}/dashboard/home">Home
+				<li class="nav-item active"><a class="nav-link" href="${pageContext.request.contextPath}/home">Home
 						<span class="sr-only">Home</span>
 				</a></li>
 				<li class="nav-item"><a class="nav-link" href="#features">Features</a>

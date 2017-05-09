@@ -22,7 +22,7 @@ public class BranchDao {
 		Map<String, Integer> map = new HashMap<String, Integer>();
 		map.put("beginRow", (currentPage-1)*pagePerRow);
 		map.put("pagePerRow", pagePerRow);
-		return sqlSessionTemplate.selectList("com.monorella.head.branch.MemberMapper.selectBranchList", map);
+		return sqlSessionTemplate.selectList("com.monorella.head.branch.BranchMapper.selectBranchList", map);
 	}
 	// 등록 된 지점 수
 	public int selectBranchCount() {

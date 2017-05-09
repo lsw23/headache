@@ -31,8 +31,7 @@
 	<!-- 커넥션 풀 설정 -->
 	<beans:bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
         <beans:property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-        <beans:property name="url" value="jdbc:mysql://monorella.cafe24.com/monorella?useUnicode=true&amp;characterEncoding=euckr"/>
-       <!--  &-> &amp;  xml에서는 대신해서 쓴다-->
+        <beans:property name="url" value="jdbc:mysql://monorella.cafe24.com:3306/monorella?useUnicode=true&amp;characterEncoding=utf-8"/>
         <beans:property name="username" value="monorella"/>
         <beans:property name="password" value="gkahsl!23"/>
     </beans:bean>

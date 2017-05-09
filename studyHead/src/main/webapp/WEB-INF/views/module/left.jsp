@@ -12,10 +12,9 @@
 			</li>
 			<li class="nav-item"><a class="nav-link" href="#submenu2"
 				data-toggle="collapse" data-target="#submenu2">지점관리 ▾</a>
-				<ul class="list-unstyled flex-column pl-3 collapse" id="submenu2"
-					aria-expanded="false">
+				<ul class="list-unstyled flex-column pl-3 collapse" id="submenu2" aria-expanded="false">
 					<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/branch">지점등록</a></li>
-					<li class="nav-item"><a class="nav-link" href="">열람실현황</a></li>
+					<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/branch/branch_list">지점목록</a></li>
 				</ul>
 			</li>
 			<li class="nav-item"><a class="nav-link" href="#submenu3"

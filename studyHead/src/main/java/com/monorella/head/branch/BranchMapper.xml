@@ -2,7 +2,19 @@
 
 <mapper namespace="com.monorella.head.branch.BranchMapper">
 
-	
+	<select id="selectBranchList" parameterType="java.util.Map" resultType="com.monorella.head.dto.Branch">
+		SELECT
+		branch_cd
+		, branch_name
+		, branch_tel
+		, branch_addr
+		, branch_in_date
+		, room_num
+		, member_num
+		FROM branch
+		ORDER BY branch_cd DESC
+		LIMIT #{beginRow}, #{pagePerRow}
+	</select>
 
 	<select id="selectBranchCount" resultType="int">
 		SELECT COUNT(*) FROM branch	
