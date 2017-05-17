@@ -68,7 +68,7 @@ public class BranchController {
 	}
 	
 	// 지점 등록 폼 요청
-	@RequestMapping(value="//branch/branch_form", method=RequestMethod.GET)
+	@RequestMapping(value="/branch/branch_form", method=RequestMethod.GET)
 	public String branchForm(){
 		System.out.println("BranchController-> branchForm()");
 		return "branch/branch_form";

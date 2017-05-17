@@ -9,9 +9,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.monorella.head.dto.HeadManager;
 
-/**
- * Handles requests for the application home page.
- */
 @Controller
 public class LoginController {
 	
@@ -22,7 +19,7 @@ public class LoginController {
 	@RequestMapping(value = "/login/logout", method = RequestMethod.GET)
 	public String logout() {
 		System.out.println("LoginController-> logout()");
-		return "/login/login_form";
+		return "/login";
 	}
 	
 	// 로그인 처리
@@ -40,14 +37,14 @@ public class LoginController {
 			session.setAttribute("head_pw", hm.getHead_pw());
 			session.setAttribute("head_name", hm.getHead_name());
 			session.setAttribute("head_manager", hm.getHead_manager());
-			return "/dashboard/home";
+			return "/branch/branch_form";
 		}
 	}
 	// test 로그인 폼
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String loginForm() {
 		System.out.println("LoginController-> loginForm()");
-		return "/login/login_form";
+		return "/login";
 	}
 	
 }

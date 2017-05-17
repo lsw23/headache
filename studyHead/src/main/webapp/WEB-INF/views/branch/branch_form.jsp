@@ -1,86 +1,203 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
-	<!-- head -->
-	<c:import url="../module/head.jsp" />
-	<style type="text/css">
-	.textSize{
-		width: 400px;
-		height: 40px;
-	}
-	</style>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="templatemo">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,700' rel='stylesheet' type='text/css'>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath}/resources/css/templatemo-style.css" rel="stylesheet">
 </head>
 <body>
-	<!-- top -->
-	<c:import url = "../module/top.jsp" />
-	
-	<!-- left -->
-	<div class="container-fluid" id="main">
-		<div class="row row-offcanvas row-offcanvas-left">
-			<c:import url = "../module/left.jsp" />
-			<!-- main -->
-			<div class="col-sm-10 main">
-<!-- ---------------------------------------------------------- -->
-				<div class="row">
-					<div class="col-sm-8">
-						<br><br><br>
-						<h1 style="color:#8EC7D0;"><b>지점 등록</b></h1>
-						<hr>
-						<form action="${pageContext.request.contextPath}/branch/branch_insert_pro" method="post">
-						<div class="row">
-							<div class="col-sm-2" style="color:#467F88;"><b>지점코드</b></div>
-							<div class="col-sm-10 textWidth"><input type="text" id="branch_cd" name="branch_cd" class="textSize form-control"/></div>
+	<!-- Left column -->
+	<c:import url="../module2/left.jsp"/>
+	<!-- top column -->	
+	<c:import url="../module2/top.jsp"/>
+		
+			<!-- Main content -->
+			<div class="templatemo-content-container">
+				<div class="templatemo-content-widget white-bg">
+					<h2 class="margin-bottom-10">Preferences</h2>
+					<p>Here goes another form and form controls.</p>
+					<form action="index.html" class="templatemo-login-form"
+						method="post" enctype="multipart/form-data">
+						<div class="row form-group">
+							<div class="col-lg-6 col-md-6 form-group">
+								<label for="inputFirstName">First Name</label> 
+								<input type="text" class="form-control" id="inputFirstName" placeholder="John">
+							</div>
+							<div class="col-lg-6 col-md-6 form-group">
+								<label for="inputLastName">Last Name</label> 
+								<input type="text" class="form-control" id="inputLastName" placeholder="Smith">
+							</div>
 						</div>
-						<div class="col-sm-12" style="color:#467F88;"><br></div>
-						<div class="row">
-							<div class="col-sm-2" style="color:#467F88;"><b>대표코드</b></div>
-							<div class="col-sm-10"><input type="text" id="branch_owner_cd" name="branch_owner_cd" class="textSize form-control"></div>
+						<div class="row form-group">
+							<div class="col-lg-6 col-md-6 form-group">
+								<label for="inputUsername">지점명</label> 
+								<input type="text" class="form-control" id="inputUsername" placeholder="Admin">
+							</div>
+							<div class="col-lg-6 col-md-6 form-group">
+								<label for="inputEmail">Email</label> 
+								<input type="email" class="form-control" id="inputEmail" placeholder="admin@company.com">
+							</div>
 						</div>
-						<div class="col-sm-12"><br></div>
-						<div class="row">
-							<div class="col-sm-2" style="color:#467F88;"><b>지점명</b></div>
-							<div class="col-sm-10"><input type="text" id="branch_name" name="branch_name" class="textSize form-control"/></div>
+						<div class="row form-group">
+							<div class="col-lg-6 col-md-6 form-group">
+								<label for="inputCurrentPassword">Current Password</label> 
+								<input type="password" class="form-control highlight" id="inputCurrentPassword" placeholder="*********************">
+							</div>
 						</div>
-						<div class="col-sm-12"><br></div>
-						<div class="row">
-							<div class="col-sm-2" style="color:#467F88;"><b>주소</b></div>
-							<div class="col-sm-10"><input type="text" id="branch_addr" name="branch_addr" class="textSize form-control"/></div>
+						<div class="row form-group">
+							<div class="col-lg-6 col-md-6 form-group">
+								<label for="inputNewPassword">New Password</label> 
+								<input type="password" class="form-control" id="inputNewPassword">
+							</div>
+							<div class="col-lg-6 col-md-6 form-group">
+								<label for="inputConfirmNewPassword">Confirm New Password</label> 
+								<input type="password" class="form-control" id="inputConfirmNewPassword">
+							</div>
 						</div>
-						<div class="col-sm-12"><br></div>
-						<div class="row">
-							<div class="col-sm-2" style="color:#467F88;"><b>연락처</b></div>
-							<div class="col-sm-10"><input type="text" id="branch_tel" name="branch_tel" class="textSize form-control"/></div>
+						<div class="row form-group">
+							<div class="col-lg-12 has-success form-group">
+								<label class="control-label" for="inputWithSuccess">Input with success</label> 
+								<input type="text" class="form-control" id="inputWithSuccess">
+							</div>
 						</div>
-						<div class="col-sm-12"><br></div>
-						<div class="row">
-							<div class="col-sm-2" style="color:#467F88;"><b>열람실 수</b></div>
-							<div class="col-sm-10"><input type="text" id="room_num" name="room_num" class="textSize form-control"/></div>
+						<div class="row form-group">
+							<div class="col-lg-12 has-warning form-group">
+								<label class="control-label" for="inputWithWarning">Input with warning</label> 
+								<input type="text" class="form-control" id="inputWithWarning">
+							</div>
 						</div>
-						<div class="col-sm-12"><br></div>
-						<div class="row">
-							<div class="col-sm-2" style="color:#467F88;"><b>회원 수</b></div>
-							<div class="col-sm-10"><input type="text" id="member_num" name="member_num" class="textSize form-control"/></div>
+						<div class="row form-group">
+							<div class="col-lg-12 has-error form-group">
+								<label class="control-label" for="inputWithError">Input with error</label> 
+								<input type="text" class="form-control" id="inputWithError">
+							</div>
 						</div>
-						<div class="col-sm-12"><br></div>
-						<div class="row">
-							<div class="col-sm-2" style="color:#467F88;"><b>등록일</b></div>
-							<div class="col-sm-10"><input type="date" id="branch_in_date" name="branch_in_date" class="textSize form-control"/></div>
+						<div class="row form-group">
+							<div class="col-lg-12 form-group">
+								<label class="control-label" for="inputNote">Note</label>
+								<textarea class="form-control" id="inputNote" rows="3"></textarea>
+							</div>
 						</div>
-						<hr>
-						<div class="col-sm-12"><input type="submit" class="btn btn-primary" value="등록"></div>	
-						</form>
-					</div>
-					<div class="col-sm-4"></div>
-<!-- ---------------------------------------------------------- -->			
+						<div class="row form-group">
+							<div class="col-lg-6 col-md-6 form-group">
+								<label class="control-label templatemo-block">Single Selection Control</label> 
+								<select class="form-control">
+									<option value="html">HTML</option>
+									<option value="plain">Plain Text</option>
+								</select>
+							</div>
+							<div class="col-lg-6 col-md-6 form-group">
+								<div class="templatemo-block margin-bottom-5">
+									<input type="checkbox" name="emailOptions" id="c1" value="new" checked> 
+									<label for="c1" class="font-weight-400"><span></span>Email me when new member sign up.</label>
+								</div>
+								<div class="templatemo-block margin-bottom-5">
+									<input type="checkbox" name="emailOptions" id="c2" value="weekly"> 
+									<label for="c2" class="font-weight-400"><span></span>Weekly summary email</label>
+								</div>
+							</div>
+						</div>
+						<div class="row form-group">
+							<div class="col-lg-6 col-md-6 form-group">
+								<label class="control-label templatemo-block">Multiple Selection Control</label> 
+								<select multiple class="templatemo-multi-select form-control" style="overflow-y: scroll;">
+									<option value="">Charts</option>
+									<option value="">Graphs</option>
+									<option value="">Icons</option>
+									<option value="">Repsonsive</option>
+									<option value="">HTML5</option>
+									<option value="">CSS3</option>
+									<option value="">jQuery</option>
+								</select>
+							</div>
+							<div class="col-lg-6 col-md-6 form-group">
+								<div>
+									<label class="control-label templatemo-block">Email Option</label>
+									<div class="templatemo-block margin-bottom-5">
+										<input type="radio" name="emailOptions" id="r1" value="html" checked> 
+										<label for="r1" class="font-weight-400"><span></span>HTML Format</label>
+									</div>
+									<div class="templatemo-block margin-bottom-5">
+										<input type="radio" name="emailOptions" id="r2" value="plain">
+										<label for="r2" class="font-weight-400"><span></span>Plain Text</label>
+									</div>
+									<div class="templatemo-block margin-bottom-5">
+										<input type="radio" name="emailOptions" id="r3" value="rich">
+										<label for="r3" class="font-weight-400"><span></span>Rich Text</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row form-group">
+							<div class="col-lg-12 form-group">
+								<div class="margin-right-15 templatemo-inline-block">
+									<input type="checkbox" name="server" id="c3" value="" checked>
+									<label for="c3" class="font-weight-400"><span></span>Server Status</label>
+								</div>
+								<div class="margin-right-15 templatemo-inline-block">
+									<input type="checkbox" name="member" id="c4" value="">
+									<label for="c4" class="font-weight-400"><span></span>Member Status</label>
+								</div>
+								<div class="margin-right-15 templatemo-inline-block">
+									<input type="checkbox" name="expired" id="c5" value="">
+									<label for="c5" class="font-weight-400"><span></span>Expired Members</label>
+								</div>
+							</div>
+						</div>
+						<div class="row form-group">
+							<div class="col-lg-12 form-group">
+								<div class="margin-right-15 templatemo-inline-block">
+									<input type="radio" name="radio" id="r4" value=""> 
+									<label for="r4" class="font-weight-400"><span></span>Bootstrap</label>
+								</div>
+								<div class="margin-right-15 templatemo-inline-block">
+									<input type="radio" name="radio" id="r5" value="" checked>
+									<label for="r5" class="font-weight-400"><span></span>Foundation</label>
+								</div>
+								<div class="margin-right-15 templatemo-inline-block">
+									<input type="radio" name="radio" id="r6" value=""> 
+									<label for="r6" class="font-weight-400"><span></span>Skeleton</label>
+								</div>
+							</div>
+						</div>
+						<div class="row form-group">
+							<div class="col-lg-12">
+								<label class="control-label templatemo-block">File Input</label>
+								<!-- <input type="file" name="fileToUpload" id="fileToUpload" class="margin-bottom-10"> -->
+								<input type="file" name="fileToUpload" id="fileToUpload" class="filestyle" data-buttonName="btn-primary" data-buttonBefore="true" data-icon="false">
+								<p>Maximum upload size is 5 MB.</p>
+							</div>
+						</div>
+						<div class="form-group text-right">
+							<button type="submit" class="templatemo-blue-button">Update</button>
+							<button type="reset" class="templatemo-white-button">Reset</button>
+						</div>
+					</form>
+				</div>
+				<footer class="text-right">
+					<p>
+						Copyright &copy; 2084 Company Name | Designed by <a
+							href="http://www.templatemo.com" target="_parent">templatemo</a>
+					</p>
+				</footer>
 			</div>
-			
-<c:import url = "../module/foot.jsp" />
+		</div>
+	</div>
 
-<footer class="container-fluid" style="background-color: #0275d8;">
-		<p class="text-center" style="color: white;">©2016-2017 Company</p>
-</footer>
+	<!-- JS -->
+	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery-1.11.2.min.js"></script>
+	<!-- jQuery -->
+	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/bootstrap-filestyle.min.js"></script>
+	<!-- http://markusslima.github.io/bootstrap-filestyle/ -->
+	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/templatemo-script.js"></script>
+	<!-- Templatemo Script -->
 </body>
 </html>
