@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.monorella.head.dto.HeadManager;
 
@@ -15,6 +16,14 @@ public class LoginController {
 	@Autowired
 	LoginDao loginDao;
 
+	// test
+	
+	@RequestMapping(value = "/test", method = RequestMethod.GET)
+	public String test(@RequestParam(value="fileToUpload", required=true) String fileToUpload) {
+		System.out.println("LoginController-> test()");
+		return "/test";
+	}
+	
 	// 로그아웃
 	@RequestMapping(value = "/login/logout", method = RequestMethod.GET)
 	public String logout() {

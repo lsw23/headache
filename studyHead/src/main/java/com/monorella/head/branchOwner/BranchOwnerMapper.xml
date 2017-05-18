@@ -1,0 +1,40 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.monorella.head.branch.BranchOwnerMapper">
+	
+	<insert id="insertBranchOwner" parameterType="com.monorella.head.dto.BranchOwner">
+		INSERT INTO `branch_owner_tb` 
+		(`branch_owner_cd`
+		, `owner_num`
+		, `owner_nm`
+		, `branch_owner_id`
+		, `branch_owner_pw`
+		, `branch_owner_postcode`
+		, `branch_owner_addr`
+		, `branch_owner_detail_addr`
+		, `branch_owner_tel`
+		, `branch_owner_in_date`
+		, `branch_nm`
+		, `branch_tel`
+		, `branch_addr`
+		, `branch_postcode`
+		, `branch_detail_addr`) 
+		VALUES (
+		  #{branch_owner_cd}
+		, #{owner_num}
+		, #{owner_nm}
+		, #{branch_owner_id}
+		, #{branch_owner_pw}
+		, #{branch_owner_postcode}
+		, #{branch_owner_addr}
+		, #{branch_owner_detail_addr}
+		, #{branch_owner_tel}
+		, NOW()
+		, #{branch_nm}
+		, #{branch_tel}
+		, #{branch_addr}
+		, #{branch_postcode}
+		, #{branch_detail_addr});
+	</insert>
+
+</mapper>

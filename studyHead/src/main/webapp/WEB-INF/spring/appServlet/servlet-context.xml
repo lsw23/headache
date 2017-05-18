@@ -40,6 +40,7 @@
             <beans:list>
                 <beans:value>classpath:com/monorella/head/login/LoginMapper.xml</beans:value>
                 <beans:value>classpath:com/monorella/head/branch/BranchMapper.xml</beans:value>
+                <beans:value>classpath:com/monorella/head/branchOwner/BranchOwnerMapper.xml</beans:value>
             </beans:list>
         </beans:property>
     </beans:bean>

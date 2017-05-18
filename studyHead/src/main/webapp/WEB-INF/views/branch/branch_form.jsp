@@ -24,8 +24,8 @@
 				<div class="templatemo-content-widget white-bg">
 					<h2 class="margin-bottom-10">Preferences</h2>
 					<p>Here goes another form and form controls.</p>
-					<form action="index.html" class="templatemo-login-form"
-						method="post" enctype="multipart/form-data">
+					<form action="index.html" class="templatemo-login-form" method="post" enctype="multipart/form-data">
+						
 						<div class="row form-group">
 							<div class="col-lg-6 col-md-6 form-group">
 								<label for="inputFirstName">First Name</label> 
@@ -181,6 +181,7 @@
 							<button type="reset" class="templatemo-white-button">Reset</button>
 						</div>
 					</form>
+				
 				</div>
 				<footer class="text-right">
 					<p>
