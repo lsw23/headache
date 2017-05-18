@@ -4,10 +4,6 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
-<meta name="author" content="templatemo">
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,700' rel='stylesheet' type='text/css'>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css" rel="stylesheet">
@@ -24,8 +20,7 @@
 				<div class="templatemo-content-widget white-bg">
 					<h2 class="margin-bottom-10">사업자 정보 등록</h2>
 					<hr>
-					<form class="templatemo-login-form" action="${pageContext.request.contextPath}
-					/branch_owner_insert_pro" method="post">
+					<form class="templatemo-login-form" action="${pageContext.request.contextPath}/branch_owner_insert_pro" method="post">
 						<div class="row form-group">
 							<div class="col-lg-6 col-md-6 form-group">
 								<label for="inputFirstName">지점 대표 코드</label> 
@@ -113,9 +108,8 @@
 							</script>
 							<div class="col-lg-6 col-md-6 form-group">
 								<label>&nbsp;</label>
-								<input style="width: 150px;" type="button" class="form-control " 
-								onclick="sample6_execDaumPostcode()" value="우편번호 찾기"><div style="height: 10px;"></div>
-								<input type="text" id="branch_owner_detail_addr" name=branch_owner_detail_addr" class="form-control"  placeholder="상세주소">
+								<input style="width: 150px;" type="button" class="form-control" onclick="sample6_execDaumPostcode()" value="우편번호 찾기"><div style="height: 10px;"></div>
+								<input type="text" id="branch_owner_detail_addr" name="branch_owner_detail_addr" class="form-control"  placeholder="상세주소"/>
 							</div>
 						</div>
 						<div class="row form-group">

@@ -24,7 +24,8 @@
 					<li><a href="#"><i class="fa fa-home fa-fw"></i>Dashboard</a></li>
 					<li><a href="#"><i class="fa fa-bar-chart fa-fw"></i>Charts</a></li>
 					<li><a href="${pageContext.request.contextPath}/barach_owner/branch_owner_form"><i class="fa fa-handshake-o fa-fw"></i>사업자 정보 등록</a></li>
+					<li><a href="${pageContext.request.contextPath}/barach_owner/branch_owner_list"><i class="fa fa fa-server fa-fw"></i>사업자 목록</a></li>
 					<li><a href="#"><i class="fa fa-eject fa-fw"></i>Sign Out</a></li>
 				</ul>
 			</nav>
-		</div>			
+		</div>

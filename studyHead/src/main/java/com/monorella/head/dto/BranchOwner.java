@@ -115,5 +115,16 @@ public class BranchOwner {
 	public void setBranch_detail_addr(String branch_detail_addr) {
 		this.branch_detail_addr = branch_detail_addr;
 	}
+	@Override
+	public String toString() {
+		return "BranchOwner [branch_owner_cd=" + branch_owner_cd + ", owner_num=" + owner_num + ", branch_owner_id="
+				+ branch_owner_id + ", branch_owner_pw=" + branch_owner_pw + ", branch_owner_addr=" + branch_owner_addr
+				+ ", branch_owner_postcode=" + branch_owner_postcode + ", branch_owner_detail_addr="
+				+ branch_owner_detail_addr + ", owner_nm=" + owner_nm + ", branch_owner_tel=" + branch_owner_tel
+				+ ", branch_owner_in_date=" + branch_owner_in_date + ", branch_nm=" + branch_nm + ", branch_tel="
+				+ branch_tel + ", branch_addr=" + branch_addr + ", branch_postcode=" + branch_postcode
+				+ ", branch_detail_addr=" + branch_detail_addr + ", branch_contract_file_path="
+				+ branch_contract_file_path + "]";
+	}
 	
 }

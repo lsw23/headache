@@ -1,7 +1,15 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.monorella.head.branch.BranchOwnerMapper">
+<mapper namespace="com.monorella.head.branchOwner.BranchOwnerMapper">
 	
+	<!-- 사업자 목록 -->
+	<select id="SelectBranchOwnerList" parameterType="java.util.List" resultType="com.monorella.head.dto.BranchOwner">
+		SELECT owner_num, owner_nm, branch_owner_tel, branch_nm, branch_tel, branch_addr, branch_detail_addr
+		FROM branch_owner_tb
+		ORDER BY owner_nm ASC;
+	</select>
+	
+	<!-- 사업자 등록 -->
 	<insert id="insertBranchOwner" parameterType="com.monorella.head.dto.BranchOwner">
 		INSERT INTO `branch_owner_tb` 
 		(`branch_owner_cd`

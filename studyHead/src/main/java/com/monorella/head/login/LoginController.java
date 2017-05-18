@@ -46,7 +46,7 @@ public class LoginController {
 			session.setAttribute("head_pw", hm.getHead_pw());
 			session.setAttribute("head_name", hm.getHead_name());
 			session.setAttribute("head_manager", hm.getHead_manager());
-			return "/branch/branch_form";
+			return "/barach_owner/branch_owner_form";
 		}
 	}
 	// test 로그인 폼
