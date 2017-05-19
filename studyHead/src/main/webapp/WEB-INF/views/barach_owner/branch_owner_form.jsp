@@ -244,7 +244,9 @@
 			if(!idchk.test($.trim($("#branch_owner_id").val()))){
 				$('font[name=id_check]').text('');
 				$('font[name=id_check]').html("아이디는 숫자와 영문자 조합으로 6~15자리를 사용해야 합니다.");
-			};
+			}else{
+				$('font[name=id_check]').text('');
+			}
 		});
 		
 		$('#branch_owner_pw').keyup(function(){
