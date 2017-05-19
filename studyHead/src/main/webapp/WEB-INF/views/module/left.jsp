@@ -1,42 +1,31 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<div class="col-md-3 col-lg-2 sidebar-offcanvas" id="sidebar" role="navigation">
-		<ul class="nav flex-column pl-1">
-			<li class="nav-item"><a class="nav-link" href="#submenu1"
-				data-toggle="collapse" data-target="#submenu1">DashBoard ▾</a>
-				<ul class="list-unstyled flex-column pl-3 collapse" id="submenu1"
-					aria-expanded="false">
-					<li class="nav-item"><a class="nav-link" href="">매출현황</a></li>
-					<li class="nav-item"><a class="nav-link" 
-						href="${pageContext.request.contextPath}/dashboard/member_status">회원 현황</a></li>
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+
+	<div class="templatemo-flex-row">
+		<div class="templatemo-sidebar">
+			<header class="templatemo-site-header">
+				<center><h1>Zak<b>SIM</b></h1></center>
+			</header>
+			<div class="profile-photo-container">
+				<img src="${pageContext.request.contextPath}/resources/images/profile-photo.jpg" alt="Profile Photo"
+					class="img-responsive">
+				<div class="profile-photo-overlay"></div>
+			</div>
+			<!-- <form class="templatemo-search-form" role="search">
+				<div class="input-group">
+					<button type="submit" class="fa fa-search"></button>
+					<input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+				</div>
+			</form> -->
+			<div class="mobile-menu-icon">
+				<i class="fa fa-bars"></i>
+			</div>
+			<nav class="templatemo-left-nav">
+				<ul>
+					<li><a href="${pageContext.request.contextPath}/dashboard/dashboard"><i class="fa fa-home fa-fw"></i>Dashboard</a></li>
+					<li><a href="#"><i class="fa fa-bar-chart fa-fw"></i>Charts</a></li>
+					<li><a href="${pageContext.request.contextPath}/barach_owner/branch_owner_insert"><i class="fa fa-handshake-o fa-fw"></i>사업자 정보 등록</a></li>
+					<li><a href="${pageContext.request.contextPath}/barach_owner/branch_owner_list"><i class="fa fa fa-server fa-fw"></i>사업자 목록</a></li>
+					<li><a href="#"><i class="fa fa-eject fa-fw"></i>Sign Out</a></li>
 				</ul>
-			</li>
-			<li class="nav-item"><a class="nav-link" href="#submenu2"
-				data-toggle="collapse" data-target="#submenu2">지점관리 ▾</a>
-				<ul class="list-unstyled flex-column pl-3 collapse" id="submenu2"
-					aria-expanded="false">
-					<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/branch/branch_form">지점등록</a></li>
-					<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/branch/branch_list">지점목록</a></li>
-				</ul>
-			</li>
-			<li class="nav-item"><a class="nav-link" href="#submenu3"
-				data-toggle="collapse" data-target="#submenu3">회원관리 ▾</a>
-				<ul class="list-unstyled flex-column pl-3 collapse" id="submenu3"
-					aria-expanded="false">
-					<li class="nav-item"><a class="nav-link" 
-						href="${pageContext.request.contextPath}/member/member_form">회원등록</a></li>
-					<li class="nav-item"><a class="nav-link" 
-						href="${pageContext.request.contextPath}/member/member_list">회원목록</a></li>
-				</ul>
-			</li>
-			<li class="nav-item"><a class="nav-link" href="#submenu4"
-				data-toggle="collapse" data-target="#submenu4">직원관리 ▾</a>
-				<ul class="list-unstyled flex-column pl-3 collapse" id="submenu4"
-					aria-expanded="false">
-					<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/staff/staff_form">직원등록</a></li>
-					<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/staff/staff_list">직원목록</a></li>
-				</ul>
-			</li>
-			<li class="nav-item"><a class="nav-link" href="#">요금제 설정</a></li>
-		</ul>
-</div>
+			</nav>
+		</div>

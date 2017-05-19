@@ -28,7 +28,7 @@ public class LoginController {
 	@RequestMapping(value = "/login/logout", method = RequestMethod.GET)
 	public String logout() {
 		System.out.println("LoginController-> logout()");
-		return "/login";
+		return "/login/login";
 	}
 	
 	// 로그인 처리
@@ -46,14 +46,14 @@ public class LoginController {
 			session.setAttribute("head_pw", hm.getHead_pw());
 			session.setAttribute("head_name", hm.getHead_name());
 			session.setAttribute("head_manager", hm.getHead_manager());
-			return "/branch/branch_form";
+			return "/barach_owner/branch_owner_insert";
 		}
 	}
-	// test 로그인 폼
+	// 로그인 폼
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String loginForm() {
 		System.out.println("LoginController-> loginForm()");
-		return "/login";
+		return "/login/login";
 	}
 	
 }
